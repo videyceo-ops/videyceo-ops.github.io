@@ -150,59 +150,6 @@
     <div id="secretMessage" class="hidden-css">This is a secret message, hidden by default.</div>
   </footer>
 
-  <script>
-    
-    const secretMessage = document.getElementById('secretMessage');
-    if (secretMessage) { // Check if the element exists to prevent errors
-      secretMessage.classList.add('hidden-css');
-    }
-
-    
-    document.addEventListener('contextmenu', function(e) {
-      e.preventDefault();
-      console.log('Right-click prevented.'); // Optional: for debugging
-    });
-
-    
-    document.addEventListener('keydown', function(e) {
-      const forbiddenKeys = ['F12'];
-      const forbiddenCtrlShiftKeys = ['I', 'J', 'C']; // I for Inspect, J for Console, C for Elements
-      const forbiddenCtrlKeys = ['U', 'S']; // U for View Source, S for Save
-
-      
-      if (forbiddenKeys.includes(e.key)) {
-        e.preventDefault();
-        console.log(`${e.key} key prevented.`);
-      }
-
-      
-      if (e.ctrlKey && e.shiftKey && forbiddenCtrlShiftKeys.includes(e.key.toUpperCase())) {
-        e.preventDefault();
-        console.log(`Ctrl+Shift+${e.key.toUpperCase()} prevented.`);
-      }
-
-      
-      if (e.ctrlKey && forbiddenCtrlKeys.includes(e.key.toUpperCase())) {
-        e.preventDefault();
-        console.log(`Ctrl+${e.key.toUpperCase()} prevented.`);
-      }
-    });
-
-    
-    (function() {
-      var devtools = /devtool/i;
-      var checkStatus = function() {
-        if (devtools.test(function() {}.toString())) {
-          // This part only executes if dev tools are open in some browsers
-          console.warn("Hey! Looks like you're peeking. 😉");
-          console.warn("Our content is meant to be enjoyed directly!");
-          // You could also redirect, or overlay content, but that can be annoying for users.
-        }
-      };
-      
-    })();
-
-  </script>
 </body>
 
 <script async="async" data-cfasync="false" src="//pl26463375.profitableratecpm.com/4e702dbd35c732a8ebe0108475e864d3/invoke.js"></script>
@@ -210,4 +157,5 @@
 
 	
 </html>
+
 
